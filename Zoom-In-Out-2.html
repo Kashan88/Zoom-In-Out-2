@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom In Zoom Out</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 50px;
+        }
+        figure{
+            width: 300px;
+            height: 200px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .zoom-in figure img{
+            width: 300px;
+            height: auto;
+            transition: .3s ease-in-out;
+        }
+        .zoom-in figure:hover img{
+            width: 400px;
+        }
+        .zoom-out figure img{
+            width: 400px;
+            height: auto;
+            transition: .3s ease-in-out;
+        }
+        .zoom-out figure:hover img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="zoom-in">
+        <figure>
+        <img src="Images/background.jpg" alt="">
+        </figure>
+    </div>
+    <div class="zoom-out">
+        <figure>
+        <img src="Images/background.jpg" alt="">
+        </figure>
+    </div>
+</div>
+</body>
+</html>
